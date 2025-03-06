@@ -3,8 +3,7 @@ import torch
 from PIL import Image, ImageDraw
 import pandas as pd
 
-# For demonstration, we have a simulated detection function.
-# Replace this with your real model to run actual inference.
+# Add inference logic
 def simulate_detection(image):
     # Returns animals for demonstration.
     return [
@@ -51,7 +50,7 @@ def page_single_image():
                 y1 = center_y + dot_radius
 
                 draw.ellipse([x0, y0, x1, y1], fill="red")
-                # Optionally place label text near the dot
+
                 draw.text((center_x + dot_radius + 2, center_y - dot_radius), label, fill="red")
 
             col2.image(image_detected, caption="Detected Animals", use_container_width=True)
